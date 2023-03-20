@@ -1,45 +1,45 @@
 #INCLUDE "RWMAKE.CH"
 #include 'fivewin.ch'
 #include 'topconn.ch'
-
+//teste 01
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºPrograma  ³ BLITAU   ºAutor ³ Valtenio - Totvs    º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ BOLETO BANCARIO ( Imprime o boleto ITAU ) 	              º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ COOPADUBO	                                              º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºPrograma  Â³ BLITAU   ÂºAutor Â³ Valtenio - Totvs    Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ BOLETO BANCARIO ( Imprime o boleto ITAU ) 	              ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ COOPADUBO	                                              ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 
 aParametros[1]   //Do Prefixo         
-aParametros[2]   //At‚ o Prefixo      
-aParametros[3]   //Do T¡tulo          
-aParametros[4]   //At‚ o T¡tulo       
+aParametros[2]   //Atâ€š o Prefixo      
+aParametros[3]   //Do TÂ¡tulo          
+aParametros[4]   //Atâ€š o TÂ¡tulo       
 aParametros[5]   //Do Banco           
-aParametros[6]   //At‚ o Banco        
+aParametros[6]   //Atâ€š o Banco        
 aParametros[7]   //Do Cliente         
-aParametros[8]   //At‚ o Cliente      
+aParametros[8]   //Atâ€š o Cliente      
 aParametros[9]   //Da Loja            
-aParametros[10]  //At‚ a Loja         
+aParametros[10]  //Atâ€š a Loja         
 aParametros[11]  //Do Vencimento      
-aParametros[12]  //At‚ o Vencimento   
-aParametros[13]  //Da Emiss„o         
-aParametros[14]  //At‚ a Emiss„o      
-aParametros[15]  //Selecionar T¡tulos 
+aParametros[12]  //Atâ€š o Vencimento   
+aParametros[13]  //Da Emissâ€o         
+aParametros[14]  //Atâ€š a Emissâ€o      
+aParametros[15]  //Selecionar TÂ¡tulos 
 aParametros[16]  //Do Bordero         
-aParametros[17]  //At‚ o Bordero      
+aParametros[17]  //Atâ€š o Bordero      
 
-aParametros[18]	//Banco para transferencia, caso o título ainda não tenha sido transferido.
+aParametros[18]	//Banco para transferencia, caso o tÃ­tulo ainda nÃ£o tenha sido transferido.
 aParametros[19] //Agencia
 aParametros[20] //Conta
-aParametros[21] //Tipo de Cobrança, só serão aceitas 1-Simples ou 4-Vinculada/Registrada
+aParametros[21] //Tipo de CobranÃ§a, sÃ³ serÃ£o aceitas 1-Simples ou 4-Vinculada/Registrada
 
-aParametros[22] //Inibe a exibição da tela de seleção dos títulos.
-aParametros[23] //Tipo de Impressão 1=Laser, 2=Deskjet (Passar como numerico)
+aParametros[22] //Inibe a exibiÃ§Ã£o da tela de seleÃ§Ã£o dos tÃ­tulos.
+aParametros[23] //Tipo de ImpressÃ£o 1=Laser, 2=Deskjet (Passar como numerico)
 
 */
 
@@ -96,33 +96,33 @@ ENDIF
 			//Carrega os parametros pelo array passado.	
 
 			mv_par01 := aParametros[1]               //Do Prefixo         
-			mv_par02 := aParametros[2]               //At‚ o Prefixo      
-			mv_par03 := aParametros[3]               //Do T¡tulo          
-			mv_par04 := aParametros[4]               //At‚ o T¡tulo       
+			mv_par02 := aParametros[2]               //Atâ€š o Prefixo      
+			mv_par03 := aParametros[3]               //Do TÂ¡tulo          
+			mv_par04 := aParametros[4]               //Atâ€š o TÂ¡tulo       
 			mv_par05 := aParametros[5]               //Do Banco           
-			mv_par06 := aParametros[6]               //At‚ o Banco        
+			mv_par06 := aParametros[6]               //Atâ€š o Banco        
 			mv_par07 := aParametros[7]               //Do Cliente         
-			mv_par08 := aParametros[8]               //At‚ o Cliente      
+			mv_par08 := aParametros[8]               //Atâ€š o Cliente      
 			mv_par09 := aParametros[9]               //Da Loja            
-			mv_par10 := aParametros[10]               //At‚ a Loja         
+			mv_par10 := aParametros[10]               //Atâ€š a Loja         
 			mv_par11 := aParametros[11]               //Do Vencimento      
-			mv_par12 := aParametros[12]               //At‚ o Vencimento   
-			mv_par13 := aParametros[13]               //Da Emiss„o         
-			mv_par14 := aParametros[14]               //At‚ a Emiss„o      
-			mv_par15 := aParametros[15]               //Selecionar T¡tulos 
+			mv_par12 := aParametros[12]               //Atâ€š o Vencimento   
+			mv_par13 := aParametros[13]               //Da Emissâ€o         
+			mv_par14 := aParametros[14]               //Atâ€š a Emissâ€o      
+			mv_par15 := aParametros[15]               //Selecionar TÂ¡tulos 
 			mv_par16 := aParametros[16]               //Do Bordero         
-			mv_par17 := aParametros[17]               //At‚ o Bordero      
-			mv_par18 := aParametros[18]              ////Tipo de Impressão  
+			mv_par17 := aParametros[17]               //Atâ€š o Bordero      
+			mv_par18 := aParametros[18]              ////Tipo de ImpressÃ£o  
 			mv_par19 := aParametros[19]              //Tipo de Titulo de
 			mv_par20 := aParametros[20]              //Ate o Tipo de Titulo
 
 
-			If Empty(cBcoOrig) //se o parametro banco estiver vazio, Seleciona o banco padrão para emissão. 
+			If Empty(cBcoOrig) //se o parametro banco estiver vazio, Seleciona o banco padrÃ£o para emissÃ£o. 
 				
 				cMvBcoBol := '341'//GetMV('MV_BCOBOL')
 				
 				If Empty(cMvBcoBol)				
-					IW_MSGBOX('Banco padrão para transferência não informado! Verifique o Parâmetro MV_BCOBOL','Atenção', "STOP")
+					IW_MSGBOX('Banco padrÃ£o para transferÃªncia nÃ£o informado! Verifique o ParÃ¢metro MV_BCOBOL','AtenÃ§Ã£o', "STOP")
 					Return						
 				Else
 					nP := 0
@@ -159,7 +159,7 @@ ENDIF
 				DBGoTop() 				
                 
 				if Empty("BCO")
-					IW_MSGBOX('Banco padrão para transferência não Localizado! Verifique o Parâmetro MV_BCOBOL','Atenção', "STOP")
+					IW_MSGBOX('Banco padrÃ£o para transferÃªncia nÃ£o Localizado! Verifique o ParÃ¢metro MV_BCOBOL','AtenÃ§Ã£o', "STOP")
 					Return						
 				EndIf				     
 			
@@ -167,9 +167,9 @@ ENDIF
 				
 				DbSelectArea("SX5")   
 				If (dbSeek(xFilial("SX5")+"07"+"4"))
-					cSituaca:= "4"+' '+SX5->X5_DESCRI //Tipo de Cobrança ( 1 ou 4 )
+					cSituaca:= "4"+' '+SX5->X5_DESCRI //Tipo de CobranÃ§a ( 1 ou 4 )
 				Else
-					IW_MSGBOX('Situacao para transferencia nao localizado, verifique o parametro MV_SITBOL','Atenção', "STOP")
+					IW_MSGBOX('Situacao para transferencia nao localizado, verifique o parametro MV_SITBOL','AtenÃ§Ã£o', "STOP")
 					Return										
 				EndIf
 
@@ -180,14 +180,14 @@ ENDIF
 				
 				DbSelectArea("SX5")   
 				If (dbSeek(xFilial("SX5")+"07"+"4"))
-					cSituaca:= "4"+' '+SX5->X5_DESCRI //Tipo de Cobrança ( 1 ou 4 )
+					cSituaca:= "4"+' '+SX5->X5_DESCRI //Tipo de CobranÃ§a ( 1 ou 4 )
 				Else
-					IW_MSGBOX('Situacao para transferencia nao localizado, verifique o parametro MV_SITBOL','Atenção', "STOP")
+					IW_MSGBOX('Situacao para transferencia nao localizado, verifique o parametro MV_SITBOL','AtenÃ§Ã£o', "STOP")
 					Return										
 				EndIf
 			End			
 		
-			//Se não houver nenhum banco informado, não pode inibir a tela.
+			//Se nÃ£o houver nenhum banco informado, nÃ£o pode inibir a tela.
 			If !Empty(cBcoOrig)
 				lInibeTela := .F.
 			Else
@@ -199,9 +199,9 @@ ENDIF
 		//Seta se vai trazer os titulos selecinados ou nao.
 		lInverte := ( mv_par15 = 1 )
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³ Monta a tabela de situaçöes de Títulos                                                                                                                                  ³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³ Monta a tabela de situaÃ§Ã¶es de TÃ­tulos                                                                                                                                  Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		dbSelectArea("SX5")
 		dbSeek(xFilial('SX5')+"07")
 		While SX5->X5_FILIAL+SX5->X5_tabela == xFilial('SX5')+"07"
@@ -210,9 +210,9 @@ ENDIF
 		   dbSkip()
 		EndDo
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Campos que serao mostrados no browse.³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Campos que serao mostrados no browse.Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		aCpoBro :=	{	{'E1_OK',,OemToAnsi(' '),' '},;
 						{'E1_PREFIXO',,OemToAnsi('Prefixo'),'@!'},;
                    		{'E1_NUM',,OemToAnsi('Numero'),'@!'},; 
@@ -227,9 +227,9 @@ ENDIF
                    		{'E1_AGEDEP',,OemToAnsi('Ag. Dep.'),'@!'},;
                    		{'E1_CONTA',,OemToAnsi('Conta'),'@!'}	}
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Monta a query com os registros a serem marcados.!³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Monta a query com os registros a serem marcados.!Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		cQuery	:= "SELECT SE1.E1_OK, "
 		cQuery	+= "SE1.E1_PREFIXO, "
 		cQuery	+= "SE1.E1_NUM, "
@@ -290,12 +290,12 @@ ENDIF
 		cSituaca:= "1"
 		        
 		If !lInibeTela
-			DEFINE MSDIALOG oDlg TITLE OemToAnsi('Seleção dos Títulos para impressão dos Boletos.') From 001,001 To 400,700 Of oMainWnd Pixel
+			DEFINE MSDIALOG oDlg TITLE OemToAnsi('SeleÃ§Ã£o dos TÃ­tulos para impressÃ£o dos Boletos.') From 001,001 To 400,700 Of oMainWnd Pixel
 		 	oMark:=MsSelect():New('TRA','E1_OK',,aCpoBro,@lInverte,@cMarca,{5,5,165,345})
 		 	oMark:oBrowse:Refresh()
 	       
-			//@ 170, 010 SAY 'Banco/Agência/Conta para transferência' OF oDlg PIXEL 
-			//@ 170, 185 SAY 'Situação' OF oDlg PIXEL 
+			//@ 170, 010 SAY 'Banco/AgÃªncia/Conta para transferÃªncia' OF oDlg PIXEL 
+			//@ 170, 185 SAY 'SituaÃ§Ã£o' OF oDlg PIXEL 
 			//@ 180, 010 MSGET oBcoOrig VAR cBcoOrig  Picture "@S3"  F3 "SA6" Valid {|| CarregaSa6(@cBcoOrig,@cAgenOrig,@cCtaOrig,.F.,,.F.), cNomeBco := If( AllTrim(cBcoOrig) <> '', Posicione('SA6',1,xFilial('SA6')+cBcoOrig+cAgenOrig+cCtaOrig,'A6_NOME') , '' ) }  SIZE 25, 08 OF oDlg PIXEL
 			//@ 180, 039 MSGET cAgenOrig              Picture "@S5"           WHEN .F. Valid {|| CarregaSa6(@cBcoOrig,@cAgenOrig,@cCtaOrig,.F.,,.T.),.F.}                          SIZE 20, 08 OF oDlg PIXEL
 			//@ 180, 068 MSGET cCtaOrig               Picture "@S10"          WHEN .F. Valid {|| If(CarregaSa6(@cBcoOrig,@cAgenOrig,@cCtaOrig,.F.,,.T.),.T.,oBcoOrig:SetFocus()),.F.} SIZE 45, 08 OF oDlg PIXEL
@@ -320,9 +320,9 @@ ENDIF
 		RetIndex("SE1")
 		Ferase(cArqTemp+GetDbExtension())
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Retoma a area anterior ao processamento. !³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Retoma a area anterior ao processamento. !Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		RestArea(aAreaSX5)
 		RestArea(aAreaSE1)
 		RestArea(aArea)
@@ -330,21 +330,21 @@ ENDIF
 Return
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºPrograma  ³ MONTAREL ºAutor ³ Valtenio Moura      º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ IMPRESSAO DO BOLETO LASER COM CODIGO DE BARRAS             º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ Funcao Principal                                           º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³  MOTIVO                                         º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºPrograma  Â³ MONTAREL ÂºAutor Â³ Valtenio Moura      Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ IMPRESSAO DO BOLETO LASER COM CODIGO DE BARRAS             ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ Funcao Principal                                           ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³  MOTIVO                                         ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 Static Function MontaRel()
@@ -357,7 +357,7 @@ Local	cCarteira	:= ''
 Local	cCompCart   := ''
 Local	cDigCta     := ''
 Local	aDadosEmp	:= {SM0->M0_NOMECOM,; //[1]Nome da Empresa
-						SM0->M0_ENDCOB,; //[2]Endereço
+						SM0->M0_ENDCOB,; //[2]EndereÃ§o
 						AllTrim(SM0->M0_BAIRCOB)+', '+AllTrim(SM0->M0_CIDCOB)+', '+SM0->M0_ESTCOB ,; //[3]Complemento
 						'CEP: '+Subs(SM0->M0_CEPCOB,1,5)+'-'+Subs(SM0->M0_CEPCOB,6,3),; //[4]CEP
 						'PABX/FAX: '+SM0->M0_TEL,; //[5]Telefones
@@ -378,13 +378,13 @@ Local	cSituant    := ''
 
 Private	aDadosFat	:= {}	// Dados da Fatura
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Inicia o processo de impressao dos boletos. !³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Inicia o processo de impressao dos boletos. !Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		If (Len(aParametros) = 0) .OR. (Len(aParametros) <> 0)// .AND. (GetMV('MV_IMPBOL') <> '3')) 
-			oPrint := TMSPrinter():New('Impressão de Boleto Bancário')
+			oPrint := TMSPrinter():New('ImpressÃ£o de Boleto BancÃ¡rio')
 			oPrint:SetPortrait() // ou SetLandscape()
-			oPrint:StartPage()   // Inicia uma nova página		
+			oPrint:StartPage()   // Inicia uma nova pÃ¡gina		
 		EndIF
 		
 		TRA->(DbGoTop())
@@ -393,7 +393,7 @@ Private	aDadosFat	:= {}	// Dados da Fatura
 		While	TRA->( ! Eof() )
 
 				If	( lEnd )
-					If	MsgYesNo(OemToAnsi('Deseja abortar impressão ?'))
+					If	MsgYesNo(OemToAnsi('Deseja abortar impressÃ£o ?'))
 						Exit
 						Return
 					EndIf
@@ -401,9 +401,9 @@ Private	aDadosFat	:= {}	// Dados da Fatura
 
 				If	TRA->(Marked('E1_OK'))
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Posiciona no titulo que sera processado.!³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Posiciona no titulo que sera processado.!Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					DbSelectArea('SE1')
 					SE1->(DbSetOrder(1))
 					If	! SE1->(DbSeek(xFilial('SE1') + TRA->(E1_PREFIXO+E1_NUM+E1_PARCELA+E1_TIPO)))
@@ -411,53 +411,53 @@ Private	aDadosFat	:= {}	// Dados da Fatura
 						Loop
 					EndIf
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Verifica a carteira do titulo !³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Verifica a carteira do titulo !Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					If	'341' == (SE1->E1_PORTADOR)// .or. ( (SE1->E1_PORTADOR <> cBcoOrig) .and. !Empty(cBcoOrig) ), cBcoOrig, SE1->E1_PORTADOR )
-						//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-						//³BANCO ITAU       ³
-						//³??? - SIMPLES    ³
-						//³109 - REGISTRADO ³
-						//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+						//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+						//Â³BANCO ITAU       Â³
+						//Â³??? - SIMPLES    Â³
+						//Â³109 - REGISTRADO Â³
+						//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 						cCarteira	:= '175' //Iif( (IF( Empty(SE1->E1_SITUAC2) .or. ( (SE1->E1_SITUAC2 <> Substr(cSituaca,1,1)) .and. !Empty(cSituaca) ), Substr(cSituaca,1,1), SE1->E1_SITUAC2 )) == '1','000','109')						
 					EndIf
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Posiciona na Arq de Parametros CNAB para ver se há informacoes      ³
-					// Verifica se o Título já tem portador, senão pega o da transferencia.³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Posiciona na Arq de Parametros CNAB para ver se hÃ¡ informacoes      Â³
+					// Verifica se o TÃ­tulo jÃ¡ tem portador, senÃ£o pega o da transferencia.Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					DbSelectArea('SEE')
 					SEE->(DbSetOrder(1))
 
 					If Empty(SE1->E1_PORTADOR) .or. ( (SE1->E1_PORTADOR <> cBcoOrig) .and. !Empty(cBcoOrig) )
 						IF !SEE->(DbSeek(xFilial('SEE')+SE1->(cBcoOrig+cAgenOrig+Padr(cCtaOrig,10,space(1))+padr(cCarteira,2,space(1))),.T.))
-							IW_MSGBOX('Atenção, Bco/Ag/Cta [' + cBcoOrig + '/' + cAgenOrig +'/' + AllTrim(cCtaOrig) + '], da carteira ['+ cCarteira + '] Não possui parâmetros cadastrados !, Favor Veriricar!','Atenção', "STOP")
+							IW_MSGBOX('AtenÃ§Ã£o, Bco/Ag/Cta [' + cBcoOrig + '/' + cAgenOrig +'/' + AllTrim(cCtaOrig) + '], da carteira ['+ cCarteira + '] NÃ£o possui parÃ¢metros cadastrados !, Favor Veriricar!','AtenÃ§Ã£o', "STOP")
 							Exit
 							Return						
 						EndIf
 					Else
 						IF !SEE->(DbSeek(xFilial('SEE')+SE1->(E1_PORTADO+E1_AGEDEP+E1_CONTA+"R01"),.T.))
-							IW_MSGBOX('Atenção, Bco/Ag/Cta [' + SE1->E1_PORTADOR + '/' + SE1->E1_AGEDEP +'/' + AllTrim(SE1->E1_CONTA) + '], da carteira VMO ['+ cCarteira + '] Não possui parâmetros cadastrados !, Favor Veriricar!','Atenção', "STOP")
+							IW_MSGBOX('AtenÃ§Ã£o, Bco/Ag/Cta [' + SE1->E1_PORTADOR + '/' + SE1->E1_AGEDEP +'/' + AllTrim(SE1->E1_CONTA) + '], da carteira VMO ['+ cCarteira + '] NÃ£o possui parÃ¢metros cadastrados !, Favor Veriricar!','AtenÃ§Ã£o', "STOP")
 							Exit
 							Return						
 						EndIf
 					EndIf					
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Verifica Faixa Inicial e Final de Impressão           ³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Verifica Faixa Inicial e Final de ImpressÃ£o           Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
                     If (VAL(SEE->EE_FAXATU) < VAL(SEE->EE_FAXINI)) .OR. (VAL(SEE->EE_FAXATU) > VAL(SEE->EE_FAXFIM))
-						IW_MSGBOX('Atenção, Bco/Ag/Cta [' + SE1->E1_PORTADOR + '/' + SE1->E1_AGEDEP +'/' + AllTrim(SE1->E1_CONTA) + '], da carteira ['+ cCarteira + '] esgotou a faixa de impressão!, Favor Veriricar!','Atenção', "STOP")
+						IW_MSGBOX('AtenÃ§Ã£o, Bco/Ag/Cta [' + SE1->E1_PORTADOR + '/' + SE1->E1_AGEDEP +'/' + AllTrim(SE1->E1_CONTA) + '], da carteira ['+ cCarteira + '] esgotou a faixa de impressÃ£o!, Favor Veriricar!','AtenÃ§Ã£o', "STOP")
 						Exit
 						Return						                    
                     EndIf
 
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Transfere o titulo para o portador informado caso seja³
-					//³necessário.                                           ³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Transfere o titulo para o portador informado caso sejaÂ³
+					//Â³necessÃ¡rio.                                           Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					If Empty(SE1->E1_PORTADOR) .or. ( (SE1->E1_PORTADOR <> cBcoOrig) .and. !Empty(cBcoOrig) )
 						cSituant := SE1->E1_SITUAC
 						RecLock('SE1',.f.)
@@ -469,10 +469,10 @@ Private	aDadosFat	:= {}	// Dados da Fatura
 						Endif
 						SE1->(MsUnlock())
 
-						//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-						//³Grava a transferencia do titulo na tabela de titulos  ³
-						//³enviados ao banco (                                   ³
-						//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ					
+						//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+						//Â³Grava a transferencia do titulo na tabela de titulos  Â³
+						//Â³enviados ao banco (                                   Â³
+						//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™					
 						cQuery := "SET TRANSACTION ISOLATION LEVEL SERIALIZABLE "
 						cQuery += "BEGIN TRAN "
 						cQuery += "INSERT INTO " + RetSqlName('SEA')
@@ -496,36 +496,36 @@ Private	aDadosFat	:= {}	// Dados da Fatura
 						TcSQLExec( cQuery )
 					End 
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Verifica se o sistema esta preparado ou nao para imprimir³
-					//³dependendo do portador...                                ³
-					//³Este RdMake Imprime boletos dos seguintes banco...       ³
-					//³ Brasil, Bradesco, Itau, Real                            ³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Verifica se o sistema esta preparado ou nao para imprimirÂ³
+					//Â³dependendo do portador...                                Â³
+					//Â³Este RdMake Imprime boletos dos seguintes banco...       Â³
+					//Â³ Brasil, Bradesco, Itau, Real                            Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					If	( ! SE1->E1_PORTADO $ '001/237/341/356' )// .or. ( ! SE1->E1_SITUAC2 $ '14' )
-						Alert(OemToAnsi('O Titulo: '+SE1->E1_PREFIXO+SE1->E1_NUM+SE1->E1_PARCELA+SE1->E1_TIPO+', não está preparado para impressão. Verifique o Portador do titulo.'))
+						Alert(OemToAnsi('O Titulo: '+SE1->E1_PREFIXO+SE1->E1_NUM+SE1->E1_PARCELA+SE1->E1_TIPO+', nÃ£o estÃ¡ preparado para impressÃ£o. Verifique o Portador do titulo.'))
 						TRA->(DbSkip())
 						Loop
 					EndIf
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Posiciona o SA6 (Bancos)³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Posiciona o SA6 (Bancos)Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					DbSelectArea('SA6')
 					SA6->(DbSetOrder(1))
 					SA6->(DbSeek(xFilial('SA6') + SE1->E1_PORTADO + SE1->E1_AGEDEP + SE1->E1_CONTA,.T.))
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Posiciona na Arq de Parametros CNAB³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Posiciona na Arq de Parametros CNABÂ³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					DbSelectArea('SEE')
 					SEE->(DbSetOrder(1))
 					SEE->(DbSeek(xFilial('SEE')+SE1->(E1_PORTADO+E1_AGEDEP+E1_CONTA+"R01"),.T.))
                     
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Aqui defino parte do nosso numero. Sao 8 digitos para identificar o titulo. ³
-					//³Abaixo apenas uma sugestao                                                  ³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Aqui defino parte do nosso numero. Sao 8 digitos para identificar o titulo. Â³
+					//Â³Abaixo apenas uma sugestao                                                  Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					If	( Empty(SE1->E1_NUMBCO) )
 
 						Do Case
@@ -539,9 +539,9 @@ Private	aDadosFat	:= {}	// Dados da Fatura
 								cSeqCart	:= Padl(AllTrim(SEE->EE_FAXATU),12,'0')							    
 						End Case
 
-						//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-						//³Atualiza a tabela com o numero do proximo boleto. !³
-						//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+						//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+						//Â³Atualiza a tabela com o numero do proximo boleto. !Â³
+						//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 						If RecLock('SEE',.F.)
 						   Replace SEE->EE_FAXATU With Soma1(cSeqCart)
 						   MsUnLock()
@@ -559,20 +559,20 @@ Private	aDadosFat	:= {}	// Dados da Fatura
 						cNroDoc		:= SE1->E1_NUMBCO
 					EndIf
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Se for banco do brasil, apos a carteira vai um complemento³
-					//³ex: 17-019.                                               ³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Se for banco do brasil, apos a carteira vai um complementoÂ³
+					//Â³ex: 17-019.                                               Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					If SA6->A6_COD = '001'
 					   cCompCart := '-019'
 					Else
 					   cCompCart := ''
 					EndIf
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Se for banco Real o digito da conta e um calculo usando   ³
-					//³modulo 10 composto de agencia+conta+nosso_numero          ³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Se for banco Real o digito da conta e um calculo usando   Â³
+					//Â³modulo 10 composto de agencia+conta+nosso_numero          Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					If SA6->A6_COD = '356'
 					   cDigCta := U_DIGIT001( cNroDoc + SubStr(SA6->A6_AGENCIA,1,4) + StrZero(Val( SubStr(SA6->A6_NUMCON,1,If(At('-',SA6->A6_NUMCON) # 0,At('-',SA6->A6_NUMCON)-1,Len(AllTrim(SA6->A6_NUMCON))-1)) ),7) )
 					Else
@@ -595,16 +595,16 @@ Private	aDadosFat	:= {}	// Dados da Fatura
 										cCarteira+cCompCart,;
 										'itau.BMP'}
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Posiciona o SA1 (Cliente)³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Posiciona o SA1 (Cliente)Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					DbSelectArea('SA1')
 					SA1->(DbSetOrder(1))
 					SA1->(DbSeek(xFilial('SA1')+SE1->E1_CLIENTE+SE1->E1_LOJA,.T.))
 
 					// [1] Razao Social
 					// [2] Codigo
-					// [3] Endereço 
+					// [3] EndereÃ§o 
 					// [4] Cidade
 					// [5] Estado
 					// [6] CEP
@@ -631,17 +631,17 @@ Private	aDadosFat	:= {}	// Dados da Fatura
 										SA1->A1_PESSOA}
 					EndIf
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Posiciona o SE1 (Contas a receber)³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Posiciona o SE1 (Contas a receber)Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					DbSelectArea('SE1')
 					nVlrAbat := SomaAbat(SE1->E1_PREFIXO,SE1->E1_NUM,SE1->E1_PARCELA,'R',1,,SE1->E1_CLIENTE,SE1->E1_LOJA)
 					DbSelectArea('SE1')
 
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Monta codigo de barras³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Monta codigo de barrasÂ³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					If	( AllTrim(SE1->E1_PORTADOR) == '341' )		//ITAU
 						aCB_RN_NN := xItaVerfBar(SE1->E1_PREFIXO,SE1->E1_NUM,SE1->E1_PARCELA,SE1->E1_TIPO,;
 									 Subs(aDadosBanco[1],1,3),aDadosBanco[3],aDadosBanco[4],aDadosBanco[5]	,;
@@ -649,8 +649,8 @@ Private	aDadosFat	:= {}	// Dados da Fatura
 					EndIf
 
 					// [01] Numero do titulo
-					// [02] Data da emissão do titulo
-					// [03] Data da emissão do boleto
+					// [02] Data da emissÃ£o do titulo
+					// [03] Data da emissÃ£o do boleto
 					// [04] Data do vencimento
 					// [05] Valor do titulo
 					// [06] Nosso numero (Ver formula para calculo)
@@ -665,37 +665,37 @@ Private	aDadosFat	:= {}	// Dados da Fatura
 								SE1->E1_PREFIXO,;
 								SE1->E1_TIPO}
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³CARREGA AS INSTRUCOES A SEREM IMPRESSAS NO CORPO DO BOLETO!³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
-//					aBolText	:= {}  //Preencher as 7 posiçoes.
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³CARREGA AS INSTRUCOES A SEREM IMPRESSAS NO CORPO DO BOLETO!Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
+//					aBolText	:= {}  //Preencher as 7 posiÃ§oes.
 					
-//					aAdd( aBolText, 'Após o vencimento cobrar multa de R$ ' + AllTrim(Transform((aDadosTit[5] * (GetNewPar('MV_MULTBOL',2.0)/100)),'@E 999,999,999.99')) )
+//					aAdd( aBolText, 'ApÃ³s o vencimento cobrar multa de R$ ' + AllTrim(Transform((aDadosTit[5] * (GetNewPar('MV_MULTBOL',2.0)/100)),'@E 999,999,999.99')) )
 					
 //					aAdd( aBolText, 'e Juros de R$ ' + AllTrim(Transform((aDadosTit[5] * (GetNewPar('MV_JUROBOL',0.10)/100)),'@E 999,999,999.99')) + ' ao dia' )
 					
-//					aAdd( aBolText, ' ** PROTESTAR APÓS 10 DIAS DO VENCIMENTO **' )
+//					aAdd( aBolText, ' ** PROTESTAR APÃ“S 10 DIAS DO VENCIMENTO **' )
 
 					aBolText := {	"Atraso de pagamento",;
-  									" * Juros de Mora de 3,5% ao mês ",;
+  									" * Juros de Mora de 3,5% ao mÃªs ",;
 									" * Calculo ",;
 									" Valor pago ___________X R$(0,0011666 X ___) Dias ",;
-									" * Multa moratória de 2% "}					
+									" * Multa moratÃ³ria de 2% "}					
 //					aAdd( aBolText, '' )
 //					aAdd( aBolText, '' )
 //					aAdd( aBolText, '' )
 //					aAdd( aBolText, '' )
 					
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Se for fatura, verifica os dados dos titulos integrantes. !³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Se for fatura, verifica os dados dos titulos integrantes. !Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					If	( AllTrim(SE1->E1_PREFIXO) == 'FAT' )
 						aDadosFat := xVerFatura(SE1->E1_NUM)
 					EndIf
 
-					//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-					//³Grava Nosso Numero no Titulo                               ³
-					//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+					//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+					//Â³Grava Nosso Numero no Titulo                               Â³
+					//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 					DbSelectArea('SE1')
 					If	RecLock('SE1',.f.)
 						Replace SE1->E1_NUMBCO 	With aCB_RN_NN[3]   // Nosso numero (Ver formula para calculo)
@@ -721,28 +721,28 @@ Private	aDadosFat	:= {}	// Dados da Fatura
 		End
 
 		If (Len(aParametros) = 0) .OR. (Len(aParametros) <> 0 )//.AND. (GetMV('MV_IMPBOL') <> '3')) 
-			oPrint:EndPage()     // Finaliza a página
+			oPrint:EndPage()     // Finaliza a pÃ¡gina
 			oPrint:Preview()     // Visualiza antes de imprimir
 		EndIF
 
 Return
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºPrograma  ³ Impress  ºAutor ³ Microsiga Software  º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ IMPRESSAO DO BOLETO LASER CONFORME O BANCO..               º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ Funcao Principal                                           º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³  MOTIVO                                         º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºPrograma  Â³ Impress  ÂºAutor Â³ Microsiga Software  Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ IMPRESSAO DO BOLETO LASER CONFORME O BANCO..               ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ Funcao Principal                                           ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³  MOTIVO                                         ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 Static Function Impress(oPrint,aDadosEmp,aDadosTit,aDadosBanco,aDatSacado,aBolText,aCB_RN_NN)
@@ -766,14 +766,14 @@ Local	oBrush		:= TBrush():New(,4),;
 		nLinhPrin	:= 1
 		cDigBco     := ""
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Inicia uma nova pagina³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Inicia uma nova paginaÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		oPrint:StartPage()
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³C O M P R O V A N T E   D E   E N T R E G A³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³C O M P R O V A N T E   D E   E N T R E G AÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		nRow1 := 0
 
 		oPrint:Line(nRow1+0150,0500,nRow1+0070,0500) //- linha pra baixo
@@ -805,11 +805,11 @@ Local	oBrush		:= TBrush():New(,4),;
 		oPrint:Say(nRow1+0084,1900,'Comprovante de Entrega',oFont10)
 		oPrint:Line(nRow1+0150,0100,nRow1+0150,2300)
 
-		oPrint:Say(nRow1+0150,0100,'Beneficiário',oFont8)
+		oPrint:Say(nRow1+0150,0100,'BeneficiÃ¡rio',oFont8)
 oPrint:Say(nRow1+0180,0100,Substr(aDadosEmp[1],1,50),oFont9) // Nome + CNPJ
 oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFont9) // End
 
-		oPrint:Say(nRow1+0150,1060,'Agência/Código Beneficiário',oFont8)
+		oPrint:Say(nRow1+0150,1060,'AgÃªncia/CÃ³digo BeneficiÃ¡rio',oFont8)
 		oPrint:Say(nRow1+0200,1060,aDadosBanco[3]+'/'+aDadosBanco[4]+'-'+aDadosBanco[5],oFont10)
 
 		oPrint:Say(nRow1+0150,1510,'Nro.Documento',oFont8)
@@ -824,8 +824,8 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 		oPrint:Say(nRow1+0250,1510,'Valor do Documento',oFont8)
 		oPrint:Say(nRow1+0300,1550,AllTrim(TransForm(aDadosTit[5],'@E 999,999,999.99')),oFont10)
 
-		oPrint:Say(nRow1+0400,0100,'Recebi(emos) o bloqueto/título',oFont10)
-		oPrint:Say(nRow1+0450,0100,'com as características acima.',oFont10)
+		oPrint:Say(nRow1+0400,0100,'Recebi(emos) o bloqueto/tÃ­tulo',oFont10)
+		oPrint:Say(nRow1+0450,0100,'com as caracterÃ­sticas acima.',oFont10)
 		oPrint:Say(nRow1+0350,1060,'Carteira',oFont8)
 		oPrint:Say(nRow1+0400,1060,aDadosBanco[6],oFont10)
 		oPrint:Say(nRow1+0350,1410,'Nosso Numero',oFont8)
@@ -856,17 +856,17 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 
 		oPrint:Say(nRow1+0165,1910,'(   ) Mudou-se',oFont8)
 		oPrint:Say(nRow1+0205,1910,'(   ) Ausente',oFont8)
-		oPrint:Say(nRow1+0245,1910,'(   ) Não existe nº indicado',oFont8)
+		oPrint:Say(nRow1+0245,1910,'(   ) NÃ£o existe nÂº indicado',oFont8)
 		oPrint:Say(nRow1+0285,1910,'(   ) Recusado',oFont8)
-		oPrint:Say(nRow1+0325,1910,'(   ) Não procurado',oFont8)
-		oPrint:Say(nRow1+0365,1910,'(   ) Endereço insuficiente',oFont8)
+		oPrint:Say(nRow1+0325,1910,'(   ) NÃ£o procurado',oFont8)
+		oPrint:Say(nRow1+0365,1910,'(   ) EndereÃ§o insuficiente',oFont8)
 		oPrint:Say(nRow1+0405,1910,'(   ) Desconhecido',oFont8)
 		oPrint:Say(nRow1+0445,1910,'(   ) Falecido',oFont8)
 		oPrint:Say(nRow1+0485,1910,'(   ) Outros(anotar no verso)',oFont8)
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³R E C I B O    D O     S A C A D O³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³R E C I B O    D O     S A C A D OÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		nRow2 := 0
 
 		For nI := 100 to 2300 step 50
@@ -897,18 +897,18 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 
 		oPrint:Say(nRow2+0710,0100,'Local de Pagamento',oFont8)
 		oPrint:Say(nRow2+0725,0400,'QUALQUER BANCO ATE O VENCIMENTO',oFont10)
-		oPrint:Say(nRow2+0765,0400,'APÓS O VENCIMENTO, SOMENTE NO '+aDadosBanco[2],oFont10)
+		oPrint:Say(nRow2+0765,0400,'APÃ“S O VENCIMENTO, SOMENTE NO '+aDadosBanco[2],oFont10)
 
 		oPrint:Say(nRow2+0710,1810,'Vencimento',oFont8)
 		cString	:= StrZero(Day(aDadosTit[4]),2) +'/'+ StrZero(Month(aDadosTit[4]),2) +'/'+ Right(Str(Year(aDadosTit[4])),4)
 		nCol := 1810+(374-(len(cString)*22))
 		oPrint:Say(nRow2+0750,nCol,cString,oFont11c)
 
-		oPrint:Say(nRow2+0810,100 ,'Beneficiário',oFont8)
+		oPrint:Say(nRow2+0810,100 ,'BeneficiÃ¡rio',oFont8)
 		oPrint:Say(nRow2+0840,100 ,aDadosEmp[1]+'  - '+aDadosEmp[6],oFont9) // Nome + CNPJ
 		oPrint:Say(nRow2+0870,100 ,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFont9) // End
 
-		oPrint:Say(nRow2+0810,1810,'Agência/Código Beneficiário',oFont8)
+		oPrint:Say(nRow2+0810,1810,'AgÃªncia/CÃ³digo BeneficiÃ¡rio',oFont8)
 		cString := AllTrim(aDadosBanco[3]+'/'+aDadosBanco[4]+'-'+aDadosBanco[5])
 		nCol := 1810+(374-(len(cString)*22))
 		oPrint:Say(nRow2+0850,nCol,cString,oFont11c)
@@ -919,7 +919,7 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 		oPrint:Say(nRow2+0910,505 ,'Nro.Documento',oFont8)
 		oPrint:Say(nRow2+0940,605 ,aDadosTit[7]+aDadosTit[1],oFont10) // Prefixo + Numero+Parcela
 
-		oPrint:Say(nRow2+0910,1005,'Espécie Doc.',oFont8)
+		oPrint:Say(nRow2+0910,1005,'EspÃ©cie Doc.',oFont8)
 		oPrint:Say(nRow2+0940,1050,aDadosTit[8],oFont10) // Tipo do Titulo
 
 		oPrint:Say(nRow2+0910,1305,'Aceite',oFont8)
@@ -927,7 +927,7 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 
 		oPrint:Say(nRow2+0910,1485,'Data do Processamento',oFont8)
 		oPrint:Say(nRow2+0940,1550,StrZero(Day(aDadosTit[3]),2) +'/'+ StrZero(Month(aDadosTit[3]),2) +'/'+ Right(Str(Year(aDadosTit[3])),4),oFont10) // Data impressao
-		oPrint:Say(nRow2+0910,1810,'Nosso Número',oFont8)
+		oPrint:Say(nRow2+0910,1810,'Nosso NÃºmero',oFont8)
 
 		If	( AllTrim(aDadosBanco[1]) == '001' )
 			cString := AllTrim(SubStr(aDadosTit[6],1,6)+' '+SubStr(aDadosTit[6],7,5)+' - '+SubStr(aDadosTit[6],12,1))
@@ -946,7 +946,7 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 		oPrint:Say(nRow2+0980,0505,'Carteira',oFont8)
 		oPrint:Say(nRow2+1010,0555,aDadosBanco[6],oFont10)
 
-		oPrint:Say(nRow2+0980,0755,'Espécie',oFont8)
+		oPrint:Say(nRow2+0980,0755,'EspÃ©cie',oFont8)
 		oPrint:Say(nRow2+1010,0805,'R$',oFont10)
 
 		oPrint:Say(nRow2+0980,1005,'Quantidade',oFont8)
@@ -960,7 +960,7 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 		oPrint:Line (nRow2+1080,120,nRow2+1080,1000)
 		oPrint:Line (nRow2+1080,120,nRow2+1250,120)
 		oPrint:Line (nRow2+1080,1000,nRow2+1250,1000)
-		oPrint:Say(nRow2+1050,0100,'Instruções (Todas informações deste bloqueto são de exclusiva responsabilidade do beneficiário)',oFont8)
+		oPrint:Say(nRow2+1050,0100,'InstruÃ§Ãµes (Todas informaÃ§Ãµes deste bloqueto sÃ£o de exclusiva responsabilidade do beneficiÃ¡rio)',oFont8)
 		oPrint:Say(nRow2+1090,0130,aBolText[1],oFont10)
 		oPrint:Say(nRow2+1130,0130,aBolText[2],oFont10)
 		oPrint:Say(nRow2+1170,0130,aBolText[3],oFont10)
@@ -973,15 +973,15 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
                                    
 		oPrint:Line (nRow2+1090,1050,nRow2+1280,1050)
 		oPrint:Say  (nRow2+1090,1100 ,"* Pagamento somente em dinheiro ou "       ,oFont10)
-		oPrint:Say  (nRow2+1130,1100 ,"  cheque à vista"                 			,oFont10)
-		oPrint:Say  (nRow2+1170,1100 ,"OBS.: Não receber após atraso de 25 " 		,oFont10)
+		oPrint:Say  (nRow2+1130,1100 ,"  cheque Ã  vista"                 			,oFont10)
+		oPrint:Say  (nRow2+1170,1100 ,"OBS.: NÃ£o receber apÃ³s atraso de 25 " 		,oFont10)
 		oPrint:Say  (nRow2+1210,1100 ,"          dias "+DtoC(aDadosTit[4]+25)  	,oFont10)		
 
 
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Imprime os titulos que se refere a tal cobrança !³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Imprime os titulos que se refere a tal cobranÃ§a !Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		oPrint:Say(nRow2+1400,0100,'Referente aos documentos: ',oFont11)
 		//oPrint:Say(nRow1+1400,1500,'Formas de Contato: ',oFont11)
 		//oPrint:Say(nRow1+1410,1900, 'credito@petroluz.com.br   ou',oFont8) 
@@ -1012,8 +1012,8 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 			nLin := 1450 // Posicao da Linha
 			nCol := 0100 // Posicao da Coluna
 					// [01] Numero do titulo
-					// [02] Data da emissão do titulo
-					// [03] Data da emissão do boleto
+					// [02] Data da emissÃ£o do titulo
+					// [03] Data da emissÃ£o do boleto
 					// [04] Data do vencimento
 					// [05] Valor do titulo
 					// [06] Nosso numero (Ver formula para calculo)
@@ -1024,9 +1024,9 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 		EndIf	
 
 		oPrint:Say(nRow2+1050,1810,'(-) Desconto/Abatimento',oFont8)
-		oPrint:Say(nRow2+1120,1810,'(-) Outras Deduções',oFont8)
+		oPrint:Say(nRow2+1120,1810,'(-) Outras DeduÃ§Ãµes',oFont8)
 		oPrint:Say(nRow2+1190,1810,'(+) Mora/Multa',oFont8)
-		oPrint:Say(nRow2+1260,1810,'(+) Outros Acréscimos',oFont8)
+		oPrint:Say(nRow2+1260,1810,'(+) Outros AcrÃ©scimos',oFont8)
 		oPrint:Say(nRow2+1330,1810,'(=) Valor Cobrado',oFont8)
 
 		oPrint:Say(nRow2+1600,0100,'Pagador',oFont8)
@@ -1043,7 +1043,7 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 		oPrint:Say(nRow2+1789,1850,SubStr(aDadosTit[6],1,3)+SubStr(aDadosTit[6],4),oFont10)
 
 		oPrint:Say(nRow2+1805,0100,'Pagador/Avalista',oFont8)
-		oPrint:Say(nRow2+1845,1500,'Autenticação Mecânica',oFont8)
+		oPrint:Say(nRow2+1845,1500,'AutenticaÃ§Ã£o MecÃ¢nica',oFont8)
 
 		oPrint:Line(nRow2+0710,1800,nRow2+1400,1800)
 		oPrint:Line(nRow2+1120,1800,nRow2+1120,2300)
@@ -1054,9 +1054,9 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 		oPrint:Line(nRow2+1600,0100,nRow2+1600,2300)
 		oPrint:Line(nRow2+1840,0100,nRow2+1840,2300)
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³F I C H A     D E    C O M P E N S A C A O ³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³F I C H A     D E    C O M P E N S A C A O Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		nRow3 := 0
 
 		For nI := 100 to 2300 step 50
@@ -1087,18 +1087,18 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 
 		oPrint:Say(nRow3+2200,0100,'Local de Pagamento',oFont8)
 		oPrint:Say(nRow3+2215,0400,'QUALQUER BANCO ATE O VENCIMENTO',oFont10)
-		oPrint:Say(nRow3+2255,0400,'APÓS O VENCIMENTO, SOMENTE NO '+aDadosBanco[2],oFont10)
+		oPrint:Say(nRow3+2255,0400,'APÃ“S O VENCIMENTO, SOMENTE NO '+aDadosBanco[2],oFont10)
 
 		oPrint:Say(nRow3+2200,1810,'Vencimento',oFont8)
 		cString := StrZero(Day(aDadosTit[4]),2) +'/'+ StrZero(Month(aDadosTit[4]),2) +'/'+ Right(Str(Year(aDadosTit[4])),4)
 		nCol    := 1810+(374-(len(cString)*22))
 		oPrint:Say(nRow3+2240,nCol,cString,oFont11c)
 
-		oPrint:Say(nRow3+2300,0100,'Beneficiário',oFont8)
+		oPrint:Say(nRow3+2300,0100,'BeneficiÃ¡rio',oFont8)
 		oPrint:Say(nRow3+2330,0100,aDadosEmp[1]+' - '+aDadosEmp[6],oFont9) // Nome + CNPJ
 		oPrint:Say(nRow2+2370,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFont9) // End
 
-		oPrint:Say(nRow3+2300,1810,'Agência/Código Beneficiário',oFont8)
+		oPrint:Say(nRow3+2300,1810,'AgÃªncia/CÃ³digo BeneficiÃ¡rio',oFont8)
 		cString := AllTrim(aDadosBanco[3]+'/'+aDadosBanco[4]+'-'+aDadosBanco[5])
 		nCol 	:= 1810+(374-(len(cString)*22))
 		oPrint:Say(nRow3+2340,nCol,cString ,oFont11c)
@@ -1109,7 +1109,7 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 		oPrint:Say(nRow3+2400,505 ,'Nro.Documento',oFont8)
 		oPrint:Say(nRow3+2430,605 ,aDadosTit[7]+aDadosTit[1],oFont10) // Prefixo +Numero+Parcela
 
-		oPrint:Say(nRow3+2400,1005,'Espécie Doc.',oFont8)
+		oPrint:Say(nRow3+2400,1005,'EspÃ©cie Doc.',oFont8)
 		oPrint:Say(nRow3+2430,1050,aDadosTit[8],oFont10) // Tipo do Titulo
 
 		oPrint:Say(nRow3+2400,1305,'Aceite',oFont8)
@@ -1118,7 +1118,7 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 		oPrint:Say(nRow3+2400,1485,'Data do Processamento',oFont8)
 		oPrint:Say(nRow3+2430,1550,StrZero(Day(aDadosTit[3]),2) +'/'+ StrZero(Month(aDadosTit[3]),2) +'/'+ Right(Str(Year(aDadosTit[3])),4),oFont10) // Data impressao
 
-		oPrint:Say(nRow3+2400,1810,'Nosso Número',oFont8)
+		oPrint:Say(nRow3+2400,1810,'Nosso NÃºmero',oFont8)
 
 		If	( AllTrim(aDadosBanco[1]) == '001' )
 			cString := AllTrim(SubStr(aDadosTit[6],1,6)+' '+SubStr(aDadosTit[6],7,5)+' - '+SubStr(aDadosTit[6],12,1))
@@ -1137,7 +1137,7 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 		oPrint:Say(nRow3+2470,0505,'Carteira',oFont8)
 		oPrint:Say(nRow3+2500,0555,aDadosBanco[6],oFont10)
 
-		oPrint:Say(nRow3+2470,0755,'Espécie',oFont8)
+		oPrint:Say(nRow3+2470,0755,'EspÃ©cie',oFont8)
 		oPrint:Say(nRow3+2500,0805,'R$',oFont10)
 
 		oPrint:Say(nRow3+2470,1005,'Quantidade',oFont8)
@@ -1152,7 +1152,7 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 		oPrint:Line (nRow3+2570,120,nRow3+2570,1000)
 		oPrint:Line (nRow3+2570,120,nRow3+2740,120)
 		oPrint:Line (nRow3+2570,1000,nRow3+2740,1000)
-		oPrint:Say(nRow3+2540,0100,'Instruções (Todas informações deste bloqueto são de exclusiva responsabilidade do beneficiário)',oFont8)
+		oPrint:Say(nRow3+2540,0100,'InstruÃ§Ãµes (Todas informaÃ§Ãµes deste bloqueto sÃ£o de exclusiva responsabilidade do beneficiÃ¡rio)',oFont8)
 		oPrint:Say(nRow3+2580,0130,aBolText[1],oFont10)
 		oPrint:Say(nRow3+2620,0130,aBolText[2],oFont10)
 		oPrint:Say(nRow3+2660,0130,aBolText[3],oFont10)
@@ -1166,16 +1166,16 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 
 		oPrint:Line (nRow3+2580,1050,nRow3+2780,1050)
 		oPrint:Say  (nRow3+2580,1100 ,"* Pagamento somente em dinheiro ou"                 			,oFont10)
-		oPrint:Say  (nRow3+2620,1100 ,"  cheque à vista"                 			,oFont10)
-		oPrint:Say  (nRow3+2660,1100 ,"OBS.: Não receber após atraso de 25 "		,oFont10)
+		oPrint:Say  (nRow3+2620,1100 ,"  cheque Ã  vista"                 			,oFont10)
+		oPrint:Say  (nRow3+2660,1100 ,"OBS.: NÃ£o receber apÃ³s atraso de 25 "		,oFont10)
 		oPrint:Say  (nRow3+2700,1100 ,"          dias "+DtoC(aDadosTit[4]+25)  	,oFont10)		
 
 
 
 		oPrint:Say(nRow3+2540,1810,'(-) Desconto/Abatimento',oFont8)
-		oPrint:Say(nRow3+2610,1810,'(-) Outras Deduções',oFont8)
+		oPrint:Say(nRow3+2610,1810,'(-) Outras DeduÃ§Ãµes',oFont8)
 		oPrint:Say(nRow3+2680,1810,'(+) Mora/Multa',oFont8)
-		oPrint:Say(nRow3+2750,1810,'(+) Outros Acréscimos',oFont8)
+		oPrint:Say(nRow3+2750,1810,'(+) Outros AcrÃ©scimos',oFont8)
 		oPrint:Say(nRow3+2820,1810,'(=) Valor Cobrado',oFont8)
 
 		oPrint:Say(nRow3+2890,0100,'Pagador',oFont8)
@@ -1192,7 +1192,7 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 		oPrint:Say(nRow3+3006,1750,SubStr(aDadosTit[6],1,3)+SubStr(aDadosTit[6],4),oFont10)
 
 		oPrint:Say(nRow3+3015,0100,'Pagador/Avalista',oFont8)
-		oPrint:Say(nRow3+3055,1500,'Autenticação Mecânica - Ficha de Compensação',oFont8)
+		oPrint:Say(nRow3+3055,1500,'AutenticaÃ§Ã£o MecÃ¢nica - Ficha de CompensaÃ§Ã£o',oFont8)
 
 		oPrint:Line(nRow3+2200,1800,nRow3+2890,1800)
 		oPrint:Line(nRow3+2610,1800,nRow3+2610,2300)
@@ -1206,7 +1206,7 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 		
 		MSBAR("INT25",26.2,1.6,aCB_RN_NN[1],oPrint,.F.,,,,1.2,,,,.F.)    // IMPressao em Jato de Tinta HP 660
 /*
-		If MV_PAR18 = 2 //Impressão Deskjet
+		If MV_PAR18 = 2 //ImpressÃ£o Deskjet
 			MsBar('INT25',13.3,0.6,aCB_RN_NN[1],oPrint,.f.,,,0.0134,0.61,,,'A',.f.)
 		Else
 			MsBar('INT25',26.5,1.6,aCB_RN_NN[1],oPrint,.f.,,,0.0234,0.86,,,'A',.F.)
@@ -1214,29 +1214,29 @@ oPrint:Say(nRow1+0210,0100,Substr(aDadosEmp[2],1,28) + Alltrim(aDadosEmp[3]),oFo
 	*/	
 		//MSBAR("INT25",17.3,1.6,CB_RN_NN[1],oPrint,.F.,,,,1.8,,,,.F.)    // IMPressao em Jato de Tinta HP 660
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Finaliza a pagina³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Finaliza a paginaÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		oPrint:EndPage()
 
 Return
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºFuncao    ³ xBBVerfBar ºAutor³Microsiga           º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Verifica/Gera o Codigo de Barra ( Banco do Brasil )        º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ BOLETOS                                                    º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³ MOTIVO                                          º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºFuncao    Â³ xBBVerfBar ÂºAutorÂ³Microsiga           Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Verifica/Gera o Codigo de Barra ( Banco do Brasil )        ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ BOLETOS                                                    ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³ MOTIVO                                          ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 Static Function xBBVerfBar(	cPrefixo,cNumero,cParcela,cTipo,;
@@ -1263,9 +1263,9 @@ Local	cNosso		:= '',;
 		cAgencia	:= StrZero(Val(cAgencia),4)
 		cNosso 		:= ''
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Formulacao do nosso numero³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Formulacao do nosso numeroÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		If	( Len(AllTrim(cNroDoc)) == 12 ) // Ja esta pronto nao precisa verificar digito
 			nNum	:= SubStr(cNroDoc,1,11)
 			cNosso	:= cNroDoc
@@ -1310,21 +1310,21 @@ Local	cNosso		:= '',;
 Return aRet
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºFuncao    ³ xBraVerfBarºAutor³Microsiga           º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Verifica/Gera o Codigo de Barra ( Bradesco )               º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ BOLETOS                                                    º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³ MOTIVO                                          º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºFuncao    Â³ xBraVerfBarÂºAutorÂ³Microsiga           Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Verifica/Gera o Codigo de Barra ( Bradesco )               ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ BOLETOS                                                    ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³ MOTIVO                                          ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 Static Function xBraVerfBar(cPrefixo,cNumero,cParcela,cTipo,;
@@ -1351,9 +1351,9 @@ Local	cNosso		:= '',;
 		cAgencia	:= StrZero(Val(cAgencia),4)
 		cNosso 		:= ''
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Formulacao do nosso numero³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Formulacao do nosso numeroÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		If	( Len(AllTrim(cNroDoc)) == 12 ) // Ja esta pronto nao precisa verificar digito
 			nNum	:= SubStr(cNroDoc,1,11)
 			cNosso	:= cNroDoc
@@ -1365,9 +1365,9 @@ Local	cNosso		:= '',;
 		//ConOut('Nosso Numero s/ digito..:' + nNum)
 		//ConOut('Nosso Numero c/ digito..:' + cNosso)
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Campo Livre -  Verificar a conta e carteira³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Campo Livre -  Verificar a conta e carteiraÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		// 01 a 04 - 04 - Agencia Cedente
 		// 05 a 06 - 02 - Carteira
 		// 07 a 17 - 11 - Nosso Numero sem o digito
@@ -1381,14 +1381,14 @@ Local	cNosso		:= '',;
 	    //ConOut('Conta Cedente..:' + StrZero(Val(cConta),7) )
 	    //ConOut('Formado campo-livre..:' + cCampoL )
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Campo livre do codigo de barra - verificar a conta³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Campo livre do codigo de barra - verificar a contaÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		cFatorValor  := xFator()+StrZero(nVlrTit*100,10)
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Monta o campo Livre:³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Monta o campo Livre:Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
         // 000000000111111111122222222223333333333444444444455555555556
         // 123456789012345678901234567890123456789012345678901234567890
 		// 2379?XXXX$$$$$$$$$$LLLLLLLLLLLLLLLLLLLLLLLLL
@@ -1402,18 +1402,18 @@ Local	cNosso		:= '',;
 
 		//ConOut('Codigo para gerar o codigo de barras..:' + cLivre )
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Campo do codigo de barra³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Campo do codigo de barraÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		cDigBarra := U_Cal_5pBr(cLivre)
 		cBarra    := SubStr(cLivre,1,4)+cDigBarra+SubStr(cLivre,5,43)
 		
 		//ConOut('Digito Calculado..:' + cDigBarra )
 		//ConOut('Codigo Completo...:' + cBarra )
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Composicao da linha digitavel³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Composicao da linha digitavelÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		cParte1  := cBanco + cMoeda + SubStr(cCampoL,1,5)
 		cDig1    := U_DIGIT001( cParte1 )
 		cParte2  := SubStr(cCampoL,6,10)
@@ -1436,21 +1436,21 @@ Local	cNosso		:= '',;
 Return aRet
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºFuncao    ³ xItaVerfBarºAutor³Microsiga           º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Verifica/Gera o Codigo de Barra ( Bradesco )               º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ BOLETOS                                                    º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³ MOTIVO                                          º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºFuncao    Â³ xItaVerfBarÂºAutorÂ³Microsiga           Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Verifica/Gera o Codigo de Barra ( Bradesco )               ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ BOLETOS                                                    ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³ MOTIVO                                          ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 Static Function xItaVerfBar(cPrefixo,cNumero,cParcela,cTipo,;
@@ -1477,9 +1477,9 @@ Local	cNosso		:= '',;
 		cAgencia	:= StrZero(Val(cAgencia),4)
 		cNosso 		:= ''
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Formulacao do nosso numero³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Formulacao do nosso numeroÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		If	( Len(AllTrim(cNroDoc)) == 12 ) // Ja esta pronto nao precisa verificar digito
 			nNum	:= SubStr(cNroDoc,1,11)
 			cNosso	:= cNroDoc
@@ -1491,9 +1491,9 @@ Local	cNosso		:= '',;
 		//ConOut('Nosso Numero s/ digito..:' + nNum)
 		//ConOut('Nosso Numero c/ digito..:' + cNosso)
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Campo Livre -  ³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Campo Livre -  Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		cCampoL := AllTrim(cNosso) + StrZer(Val(cAgencia),4) + StrZero(Val(cConta),5) + U_DIGIT001(cAgencia+cConta) + '000'
 
 	    //ConOut('Agencia..:' + cAgencia )
@@ -1502,14 +1502,14 @@ Local	cNosso		:= '',;
 	    //ConOut('Conta Cedente..:' + StrZero(Val(cConta),7) )
 	    ConOut('Formado campo-livre..:' + cCampoL )
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Campo livre do codigo de barra - verificar a conta³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Campo livre do codigo de barra - verificar a contaÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		cFatorValor  := xFator()+StrZero(nVlrTit*100,10)
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Monta o campo Livre:³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Monta o campo Livre:Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
         // 000000000111111111122222222223333333333444444444455555555556
         // 123456789012345678901234567890123456789012345678901234567890
 		// 2379?XXXX$$$$$$$$$$LLLLLLLLLLLLLLLLLLLLLLLLL
@@ -1523,18 +1523,18 @@ Local	cNosso		:= '',;
 
 		//ConOut('Codigo para gerar o codigo de barras..:' + cLivre )
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Campo do codigo de barra³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Campo do codigo de barraÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		cDigBarra := U_Calc_5pIt(cLivre)
 		cBarra    := SubStr(cLivre,1,4)+cDigBarra+SubStr(cLivre,5,43)
 		
 		ConOut('Digito Calculado..:' + cDigBarra )
 		ConOut('Codigo Completo...:' + cBarra )
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Composicao da linha digitavel³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Composicao da linha digitavelÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		cParte1  := cBanco + cMoeda + SubStr(cCampoL,1,5)
 		cDig1    := U_DIGIT001( cParte1 )
 		cParte2  := SubStr(cCampoL,6,10)
@@ -1557,21 +1557,21 @@ Local	cNosso		:= '',;
 Return aRet
            
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºFuncao    ³ xReaVerfBarºAutor³Microsiga           º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Verifica/Gera o Codigo de Barra ( Real )                   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ BOLETOS                                                    º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³ MOTIVO                                          º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºFuncao    Â³ xReaVerfBarÂºAutorÂ³Microsiga           Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Verifica/Gera o Codigo de Barra ( Real )                   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ BOLETOS                                                    ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³ MOTIVO                                          ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 Static Function xReaVerfBar(cPrefixo,cNumero,cParcela,cTipo,;
@@ -1598,18 +1598,18 @@ Local	cNosso		:= '',;
 		cAgencia	:= StrZero(Val(cAgencia),4)
 		cNosso 		:= ''
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Formulacao do nosso numero³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Formulacao do nosso numeroÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		nNum	:= StrZero(Val(cNroDoc),7)
 		cNosso	:= nNum
 		
 		//ConOut('Nosso Numero s/ digito..:' + nNum)
 		//ConOut('Nosso Numero c/ digito..:' + cNosso)
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Campo Livre -  ³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Campo Livre -  Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		cCampoL := StrZero(Val(cAgencia),4) + StrZero(Val(cConta),7) + U_DIGIT001( cNosso + cAgencia + StrZero(Val(cConta),7) ) + StrZero(Val(cNosso),13)
 
 	    //ConOut('Agencia..:' + cAgencia )
@@ -1618,14 +1618,14 @@ Local	cNosso		:= '',;
 	    //ConOut('Conta Cedente..:' + StrZero(Val(cConta),7) )
 	    ConOut('Formado campo-livre..:' + cCampoL )
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Campo livre do codigo de barra - verificar a conta³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Campo livre do codigo de barra - verificar a contaÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		cFatorValor  := xFator()+StrZero(nVlrTit*100,10)
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Monta o campo Livre:³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Monta o campo Livre:Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
         // 000000000111111111122222222223333333333444444444455555555556
         // 123456789012345678901234567890123456789012345678901234567890
 		// 2379?XXXX$$$$$$$$$$LLLLLLLLLLLLLLLLLLLLLLLLL
@@ -1639,18 +1639,18 @@ Local	cNosso		:= '',;
 
 		//ConOut('Codigo para gerar o codigo de barras..:' + cLivre )
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Campo do codigo de barra³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Campo do codigo de barraÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		cDigBarra := U_Calc_5pRe(cLivre)
 		cBarra    := SubStr(cLivre,1,4)+cDigBarra+SubStr(cLivre,5,43)
 		
 		ConOut('Digito Calculado..:' + cDigBarra )
 		ConOut('Codigo Completo...:' + cBarra )
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Composicao da linha digitavel³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Composicao da linha digitavelÂ³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		cParte1  := cBanco + cMoeda + SubStr(cCampoL,1,5)
 		cDig1    := U_DIGIT001( cParte1 )
 		cParte2  := SubStr(cCampoL,6,10)
@@ -1673,21 +1673,21 @@ Local	cNosso		:= '',;
 Return aRet
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºFuncao    ³ xBBCalcDigNºAutor³Microsiga           º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Para calculo do nosso numero do banco do brasil            º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ BOLETOS                                                    º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³  MOTIVO                                         º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºFuncao    Â³ xBBCalcDigNÂºAutorÂ³Microsiga           Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Para calculo do nosso numero do banco do brasil            ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ BOLETOS                                                    ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³  MOTIVO                                         ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 Static Function xBBCalcDigN(cVariavel)
@@ -1725,21 +1725,21 @@ Local	Auxi	:= 0,;
 Return(auxi)
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºFuncao    ³xBraCalcDigNºAutor³Microsiga           º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Para calculo do nosso numero do Bradesco....               º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ Funcao Principal                                           º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³  MOTIVO                                         º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºFuncao    Â³xBraCalcDigNÂºAutorÂ³Microsiga           Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Para calculo do nosso numero do Bradesco....               ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ Funcao Principal                                           ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³  MOTIVO                                         ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 Static Function xBraCalcDigN(cVariavel)
@@ -1784,21 +1784,21 @@ Local	Auxi	:= 0,;
 Return(auxi)
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºFuncao    ³ DIGIT001 ºAutor  ³Microsiga           º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Para calculo usando modulo 10                              º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ Funcao Principal                                           º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³ MOTIVO                                          º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºFuncao    Â³ DIGIT001 ÂºAutor  Â³Microsiga           Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Para calculo usando modulo 10                              ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ Funcao Principal                                           ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³ MOTIVO                                          ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 User Function DIGIT001(cVariavel)
@@ -1832,21 +1832,21 @@ Local	Auxi 	:= 0,;
 Return(str(auxi,1,0))
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºFuncao    ³ FATOR	ºAutor  ³Microsiga           º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Calculo do FATOR de vencimento para linha digitavel.       º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ Funcao Principal                                           º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³ MOTIVO                                          º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºFuncao    Â³ FATOR	ÂºAutor  Â³Microsiga           Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Calculo do FATOR de vencimento para linha digitavel.       ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ Funcao Principal                                           ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³ MOTIVO                                          ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 Static Function xFator()
@@ -1862,21 +1862,21 @@ Static Function xFator()
 Return(cFator)
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºFuncao    ³ CAL_5pBºAutor  ³Microsiga           º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Calculo do digito do nosso numero                          º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ Funcao Principal                                           º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³  MOTIVO                                         º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºFuncao    Â³ CAL_5pBÂºAutor  Â³Microsiga           Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Calculo do digito do nosso numero                          ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ Funcao Principal                                           ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³  MOTIVO                                         ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 User Function CAL_5pBB(cVariavel)
@@ -1910,21 +1910,21 @@ Local	Auxi	:= 0,;
 Return(Str(auxi,1,0))
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºFuncao    ³ CAL_5pBrºAutor  ³Microsiga           º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Calculo do digito do nosso numero do Bradesco              º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ Funcao Principal                                           º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³  MOTIVO                                         º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºFuncao    Â³ CAL_5pBrÂºAutor  Â³Microsiga           Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Calculo do digito do nosso numero do Bradesco              ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ Funcao Principal                                           ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³  MOTIVO                                         ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 User Function CAL_5pBr(cVariavel)
@@ -1959,21 +1959,21 @@ Local	Auxi	:= 0,;
 Return(Str(auxi,1,0))
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºFuncao    ³ CALC_5pItº Autor ³Microsiga           º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Calculo do digito do nosso numero do Itau                  º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ Funcao Principal                                           º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³  MOTIVO                                         º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºFuncao    Â³ CALC_5pItÂº Autor Â³Microsiga           Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Calculo do digito do nosso numero do Itau                  ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ Funcao Principal                                           ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³  MOTIVO                                         ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 User Function CALC_5pIt(cVariavel)
@@ -2008,21 +2008,21 @@ Local	Auxi	:= 0,;
 Return(Str(auxi,1,0))
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºFuncao    ³ CALC_5pReº Autor ³Microsiga           º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Calculo do digito do nosso numero do Real                  º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ Funcao Principal                                           º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³  MOTIVO                                         º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºFuncao    Â³ CALC_5pReÂº Autor Â³Microsiga           Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Calculo do digito do nosso numero do Real                  ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ Funcao Principal                                           ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³  MOTIVO                                         ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 User Function CALC_5pRe(cVariavel)
@@ -2057,21 +2057,21 @@ Local	Auxi	:= 0,;
 Return(Str(auxi,1,0))
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºPrograma  ³ AjustaSX1ºAutor ³ Valtenio Moura      º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Ajusta o SX1 - Arquivo de Perguntas..                      º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ Funcao Principal                                           º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³ MOTIVO                                          º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºPrograma  Â³ AjustaSX1ÂºAutor Â³ Valtenio Moura      Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Ajusta o SX1 - Arquivo de Perguntas..                      ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ Funcao Principal                                           ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³ MOTIVO                                          ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 Static Function AjustaSX1(cPerg)
@@ -2079,50 +2079,50 @@ Local	aRegs   := {},;
 		_sAlias := Alias(),;
 		nX
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Campos a serem grav. no SX1³
-		//³aRegs[nx][01] - X1_GRUPO   ³
-		//³aRegs[nx][02] - X1_ORDEM   ³
-		//³aRegs[nx][03] - X1_PERGUNTE³
-		//³aRegs[nx][04] - X1_PERSPA  ³
-		//³aRegs[nx][05] - X1_PERENG  ³
-		//³aRegs[nx][06] - X1_VARIAVL ³
-		//³aRegs[nx][07] - X1_TIPO    ³
-		//³aRegs[nx][08] - X1_TAMANHO ³
-		//³aRegs[nx][09] - X1_DECIMAL ³
-		//³aRegs[nx][10] - X1_PRESEL  ³
-		//³aRegs[nx][11] - X1_GSC     ³
-		//³aRegs[nx][12] - X1_VALID   ³
-		//³aRegs[nx][13] - X1_VAR01   ³
-		//³aRegs[nx][14] - X1_DEF01   ³
-		//³aRegs[nx][15] - X1_DEF02   ³
-		//³aRegs[nx][16] - X1_DEF03   ³
-		//³aRegs[nx][17] - X1_F3      ³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Campos a serem grav. no SX1Â³
+		//Â³aRegs[nx][01] - X1_GRUPO   Â³
+		//Â³aRegs[nx][02] - X1_ORDEM   Â³
+		//Â³aRegs[nx][03] - X1_PERGUNTEÂ³
+		//Â³aRegs[nx][04] - X1_PERSPA  Â³
+		//Â³aRegs[nx][05] - X1_PERENG  Â³
+		//Â³aRegs[nx][06] - X1_VARIAVL Â³
+		//Â³aRegs[nx][07] - X1_TIPO    Â³
+		//Â³aRegs[nx][08] - X1_TAMANHO Â³
+		//Â³aRegs[nx][09] - X1_DECIMAL Â³
+		//Â³aRegs[nx][10] - X1_PRESEL  Â³
+		//Â³aRegs[nx][11] - X1_GSC     Â³
+		//Â³aRegs[nx][12] - X1_VALID   Â³
+		//Â³aRegs[nx][13] - X1_VAR01   Â³
+		//Â³aRegs[nx][14] - X1_DEF01   Â³
+		//Â³aRegs[nx][15] - X1_DEF02   Â³
+		//Â³aRegs[nx][16] - X1_DEF03   Â³
+		//Â³aRegs[nx][17] - X1_F3      Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Cria uma array, contendo todos os valores...³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Cria uma array, contendo todos os valores...Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		aAdd(aRegs,{cPerg,'01','Do Prefixo         ?','Do Prefixo         ?','Do Prefixo         ?','mv_ch1','C', 3,0,0,'G','','mv_par01','','','',''})
-		aAdd(aRegs,{cPerg,'02','At‚ o Prefixo      ?','At‚ o Prefixo      ?','At‚ o Prefixo      ?','mv_ch2','C', 3,0,0,'G','','mv_par02','','','',''})
-		aAdd(aRegs,{cPerg,'03','Do T¡tulo          ?','Do T¡tulo          ?','Do T¡tulo          ?','mv_ch3','C', 6,0,0,'G','','mv_par03','','','',''})
-		aAdd(aRegs,{cPerg,'04','At‚ o T¡tulo       ?','At‚ o T¡tulo       ?','At‚ o T¡tulo       ?','mv_ch4','C', 6,0,0,'G','','mv_par04','','','',''})
+		aAdd(aRegs,{cPerg,'02','Atâ€š o Prefixo      ?','Atâ€š o Prefixo      ?','Atâ€š o Prefixo      ?','mv_ch2','C', 3,0,0,'G','','mv_par02','','','',''})
+		aAdd(aRegs,{cPerg,'03','Do TÂ¡tulo          ?','Do TÂ¡tulo          ?','Do TÂ¡tulo          ?','mv_ch3','C', 6,0,0,'G','','mv_par03','','','',''})
+		aAdd(aRegs,{cPerg,'04','Atâ€š o TÂ¡tulo       ?','Atâ€š o TÂ¡tulo       ?','Atâ€š o TÂ¡tulo       ?','mv_ch4','C', 6,0,0,'G','','mv_par04','','','',''})
 		aAdd(aRegs,{cPerg,'05','Do Banco           ?','Do Banco           ?','Do Banco           ?','mv_ch5','C', 3,0,0,'G','','mv_par05','','','','SA6'})
-		aAdd(aRegs,{cPerg,'06','At‚ o Banco        ?','At‚ o Banco        ?','At‚ o Banco        ?','mv_ch6','C', 3,0,0,'G','','mv_par06','','','','SA6'})
+		aAdd(aRegs,{cPerg,'06','Atâ€š o Banco        ?','Atâ€š o Banco        ?','Atâ€š o Banco        ?','mv_ch6','C', 3,0,0,'G','','mv_par06','','','','SA6'})
 		aAdd(aRegs,{cPerg,'07','Do Cliente         ?','Do Cliente         ?','Do Cliente         ?','mv_ch7','C', 6,0,0,'G','','mv_par07','','','','CLI'})
-		aAdd(aRegs,{cPerg,'08','At‚ o Cliente      ?','At‚ o Cliente      ?','At‚ o Cliente      ?','mv_ch8','C', 6,0,0,'G','','mv_par08','','','','CLI'})
+		aAdd(aRegs,{cPerg,'08','Atâ€š o Cliente      ?','Atâ€š o Cliente      ?','Atâ€š o Cliente      ?','mv_ch8','C', 6,0,0,'G','','mv_par08','','','','CLI'})
 		aAdd(aRegs,{cPerg,'09','Da Loja            ?','Da Loja            ?','Da Loja            ?','mv_ch9','C', 2,0,0,'G','','mv_par09','','','',''})
-		aAdd(aRegs,{cPerg,'10','At‚ a Loja         ?','At‚ a Loja         ?','At‚ a Loja         ?','mv_cha','C', 2,0,0,'G','','mv_par10','','','',''})
+		aAdd(aRegs,{cPerg,'10','Atâ€š a Loja         ?','Atâ€š a Loja         ?','Atâ€š a Loja         ?','mv_cha','C', 2,0,0,'G','','mv_par10','','','',''})
 		aAdd(aRegs,{cPerg,'11','Do Vencimento      ?','Do Vencimento      ?','Do Vencimento      ?','mv_chb','D', 8,0,0,'G','','mv_par11','','','',''})
-		aAdd(aRegs,{cPerg,'12','At‚ o Vencimento   ?','At‚ o Vencimento   ?','At‚ o Vencimento   ?','mv_chc','D', 8,0,0,'G','','mv_par12','','','',''})
-		aAdd(aRegs,{cPerg,'13','Da Emiss„o         ?','Da Emiss„o         ?','Da Emiss„o         ?','mv_chd','D', 8,0,0,'G','','mv_par13','','','',''})
-		aAdd(aRegs,{cPerg,'14','At‚ a Emiss„o      ?','At‚ a Emiss„o      ?','At‚ a Emiss„o      ?','mv_che','D', 8,0,0,'G','','mv_par14','','','',''})
-		aAdd(aRegs,{cPerg,'15','Selecionar T¡tulos ?','Selecionar T¡tulos ?','Selecionar T¡tulos ?','mv_chf','N', 1,0,1,'C','','mv_par15','Sim','N„o','',''})
+		aAdd(aRegs,{cPerg,'12','Atâ€š o Vencimento   ?','Atâ€š o Vencimento   ?','Atâ€š o Vencimento   ?','mv_chc','D', 8,0,0,'G','','mv_par12','','','',''})
+		aAdd(aRegs,{cPerg,'13','Da Emissâ€o         ?','Da Emissâ€o         ?','Da Emissâ€o         ?','mv_chd','D', 8,0,0,'G','','mv_par13','','','',''})
+		aAdd(aRegs,{cPerg,'14','Atâ€š a Emissâ€o      ?','Atâ€š a Emissâ€o      ?','Atâ€š a Emissâ€o      ?','mv_che','D', 8,0,0,'G','','mv_par14','','','',''})
+		aAdd(aRegs,{cPerg,'15','Selecionar TÂ¡tulos ?','Selecionar TÂ¡tulos ?','Selecionar TÂ¡tulos ?','mv_chf','N', 1,0,1,'C','','mv_par15','Sim','Nâ€o','',''})
 		aAdd(aRegs,{cPerg,'16','Do Bordero         ?','Do Bordero         ?','Do Bordero         ?','mv_chg','C', 6,0,0,'G','','mv_par16','','','',''})
-		aAdd(aRegs,{cPerg,'17','At‚ o Bordero      ?','At‚ o Bordero      ?','At‚ o Bordero      ?','mv_chh','C', 6,0,0,'G','','mv_par17','','','',''})
-		aAdd(aRegs,{cPerg,'18','Tipo de Impressão  ?','Tipo de Impressão  ?','Tipo de Impressão  ?','mv_chi','N', 1,0,1,'C','','mv_par18','Laser','DeskJet','',''})		
-		aAdd(aRegs,{cPerg,'19','Do Tipo de Título  ?','Do Tipo de Título  ?','Do Tipo de Título  ?','mv_chj','C', 3,0,0,'G','','mv_par19','','','','05'})		
-		aAdd(aRegs,{cPerg,'20','Até Tipo de Título ?','Até Tipo de Título ?','Até Tipo de Título ?','mv_chk','C', 3,0,0,'G','','mv_par20','','','','05'})						
+		aAdd(aRegs,{cPerg,'17','Atâ€š o Bordero      ?','Atâ€š o Bordero      ?','Atâ€š o Bordero      ?','mv_chh','C', 6,0,0,'G','','mv_par17','','','',''})
+		aAdd(aRegs,{cPerg,'18','Tipo de ImpressÃ£o  ?','Tipo de ImpressÃ£o  ?','Tipo de ImpressÃ£o  ?','mv_chi','N', 1,0,1,'C','','mv_par18','Laser','DeskJet','',''})		
+		aAdd(aRegs,{cPerg,'19','Do Tipo de TÃ­tulo  ?','Do Tipo de TÃ­tulo  ?','Do Tipo de TÃ­tulo  ?','mv_chj','C', 3,0,0,'G','','mv_par19','','','','05'})		
+		aAdd(aRegs,{cPerg,'20','AtÃ© Tipo de TÃ­tulo ?','AtÃ© Tipo de TÃ­tulo ?','AtÃ© Tipo de TÃ­tulo ?','mv_chk','C', 3,0,0,'G','','mv_par20','','','','05'})						
 		
 		DbSelectArea('SX1')
 		SX1->(DbSetOrder(1))
@@ -2179,29 +2179,29 @@ Local	aRegs   := {},;
 Return
 
 /*
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºPrograma  ³xVerFaturaºAutor ³ Valtenio Moura      º Data ³  15/07/15   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ Verifica os titulos integrantes das faturas. !!!           º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ Funcao Principal                                           º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDATA      ³ ANALISTA ³  MOTIVO                                         º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±º          ³          ³                                                 º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœÃœ
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+Â±Â±Ã‰ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃ‹ÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»Â±Â±
+Â±Â±ÂºPrograma  Â³xVerFaturaÂºAutor Â³ Valtenio Moura      Âº Data Â³  15/07/15   ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃŠÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDesc.     Â³ Verifica os titulos integrantes das faturas. !!!           ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºUso       Â³ Funcao Principal                                           ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ‘ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±ÂºDATA      Â³ ANALISTA Â³  MOTIVO                                         ÂºÂ±Â±
+Â±Â±ÃŒÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃ˜ÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Â±Â±
+Â±Â±Âº          Â³          Â³                                                 ÂºÂ±Â±
+Â±Â±ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Â±Â±
+Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
+ÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸÃŸ
 */
 
 Static Function xVerFatura(cNumFat)
 Local	aReturn	:= {}
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Verifica, os Titulos Originais, da FATURA Impressa Acima...³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Verifica, os Titulos Originais, da FATURA Impressa Acima...Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		cSELECT :=	'SE5.E5_PREFIXO, SE5.E5_NUMERO, SE5.E5_PARCELA, SE5.E5_VALOR, '+;
 					'SE5.E5_VLDESCO, SE5.E5_VLJUROS, SE5.E5_VLMULTA '
 
@@ -2228,14 +2228,14 @@ Local	aReturn	:= {}
 		DbSelectArea('TR5')
 		TR5->(DbGoTop())
 
-		//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-		//³Elementos da Array³
-		//³1o - Emissao      ³
-		//³2o - Prefixo      ³
-		//³3o - Numero       ³
-		//³4o - Parcela      ³
-		//³5o - Valor        ³
-		//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+		//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+		//Â³Elementos da ArrayÂ³
+		//Â³1o - Emissao      Â³
+		//Â³2o - Prefixo      Â³
+		//Â³3o - Numero       Â³
+		//Â³4o - Parcela      Â³
+		//Â³5o - Valor        Â³
+		//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 		While	TR5->( ! Eof() )
 				aAdd(aReturn,{	'',;
 								TR5->E5_PREFIXO,;
@@ -2253,10 +2253,10 @@ Return aReturn
 
 
 /*BEGINDOC
-//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-//³Funcao para validar os dados digitados na tela de seleção com relação³
-//³ao banco e agencia de transferencia e ao tipo de cobrança.           ³
-//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+//Â³Funcao para validar os dados digitados na tela de seleÃ§Ã£o com relaÃ§Ã£oÂ³
+//Â³ao banco e agencia de transferencia e ao tipo de cobranÃ§a.           Â³
+//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 ENDDOC*/
 
 STATIC FUNCTION TudoOk(oDlg)
@@ -2269,7 +2269,7 @@ Local _Msg    := ''
 
 	TRA->(DbGoTop())
 	
-	//Define se vai precisar da obrigatoriedade de banco e Tipo de Cobrança
+	//Define se vai precisar da obrigatoriedade de banco e Tipo de CobranÃ§a
 	While TRA->(!EOF())
 	   IF TRA->(Marked('E1_OK')) .and. Empty(TRA->E1_PORTADOR)
 	      lPortador := .t.
@@ -2286,26 +2286,26 @@ Local _Msg    := ''
 	
 	If  lPortador .and. Empty(cBcoOrig)
 	   	_lRet := .F.
-	   	_Msg := 'Obrigatório informar o banco de transferência !'
+	   	_Msg := 'ObrigatÃ³rio informar o banco de transferÃªncia !'
 	EndIf
 	
 	If lSituacao .and. Empty(cSituaca)
 		_lRet := .F.
-		_Msg  += _Quebra + 'Obrigatório informar a situação de Transferência !'
+		_Msg  += _Quebra + 'ObrigatÃ³rio informar a situaÃ§Ã£o de TransferÃªncia !'
 	EndIf
 	
 	If lSituacao .and. !Empty(cSituaca) .and. !Substr(cSituaca,1,1)$'1/4'
 	   _lRet := .F.
-	   _Msg  += _Quebra + 'Somente situações 1 ou 4 são permitidas !'
+	   _Msg  += _Quebra + 'Somente situaÃ§Ãµes 1 ou 4 sÃ£o permitidas !'
 	EndIf
 
 	If !Empty(cBcoOrig) .and. !Substr(cSituaca,1,1)$'1/4'
 	   _lRet := .F.
-	   _Msg  += _Quebra + 'Somente situações 1 ou 4 são permitidas !'
+	   _Msg  += _Quebra + 'Somente situaÃ§Ãµes 1 ou 4 sÃ£o permitidas !'
 	EndIf
 	
 	If !Empty(_Msg)
-		IW_MSGBOX(_Msg, 'Atenção', "STOP")
+		IW_MSGBOX(_Msg, 'AtenÃ§Ã£o', "STOP")
 	EndIf
 	
 Return _lRet
